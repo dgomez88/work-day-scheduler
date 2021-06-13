@@ -6,27 +6,5 @@ function currentDayTime() {
 }
 currentDayTime();
 
-$(".list-group").on("click", "p", function () {
-  var text = $(this).text().trim();
+$(".list-group").addClass("list-group-item");
 
-  var textInput = $("<textare>").addClass("form-control").val(text);
-  $(this).replaceWith(textInput);
-});
-
-var saveTasks = function () {
-  tasks = JSON.parse(localStorage.getItem("tasks"));
-
-  if (!tasks) {
-    tasks = {
-      nineAm: [],
-      tenAm: [],
-      elevenAm: [],
-      twelveAm: [],
-      onePm: [],
-      twoPm: [],
-      threePm: [],
-      fourPm: [],
-      fivePm: [],
-    };
-  }
-};
